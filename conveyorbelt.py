@@ -52,7 +52,7 @@ textVar = textVar + "Plates: 0\n"
 def ClassifyFunc():
     thisDict = {0: "Bottle", 1: "Bowl", 2: "Can", 3: "Cup", 4: "Plate"}
     # convModel = legacy_load_model("ConvBeltConvNetTF")
-    convModel = models.load_model("ConvBeltConvNetTF")
+    convModel = models.load_model("ConvBeltCNNTenFlow.keras")
     predictions = convModel.predict(ImageToPredict)
     # print(predictions)
     y_classes = predictions.argmax(axis=-1)
